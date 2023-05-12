@@ -4,7 +4,7 @@
 * -text
 
 # Unity visible meta is LF regardless of created platform
-*.meta text eol=lf
+*.meta text eol=lf lockable
 
 # All extensions are specified in lower cases
 # [git config core.ignorecase true] is assumed.
@@ -48,6 +48,8 @@
 # LFS
 # We intentionally NOT LFS tracking .prefab and .unity(Unity scene) in order to diff
 # We also intentionally not assign YAMLMerge as diff and merge to them, it does not work
+
+*.unity lockable
 
 # Library
 *.dll         filter=lfs diff=lfs merge=lfs
